@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>🏠 முகப்புப் பக்கம் - தூய லூர்து அன்னை ஆலயம்</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap & Font Awesome for icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
   <style>
     body {
@@ -35,13 +37,10 @@
       transition: transform 0.3s ease-in-out;
       z-index: 1000;
     }
-    .sidebar.active {
-      transform: translateX(0);
-    }
+    .sidebar.active { transform: translateX(0); }
     .toggle-btn {
       position: fixed;
-      top: 10px;
-      left: 10px;
+      top: 10px; left: 10px;
       background-color: transparent;
       color: white;
       border: none;
@@ -55,9 +54,7 @@
       white-space: nowrap;
     }
     .nav-link:hover,
-    .nav-link.active {
-      background-color: #0d6efd;
-    }
+    .nav-link.active { background-color: #0d6efd; }
     .main-wrapper {
       margin-left: 0;
       display: flex;
@@ -65,13 +62,8 @@
       min-height: 100vh;
       transition: margin-left 0.3s ease-in-out;
     }
-    .main-wrapper.shifted {
-      margin-left: 240px;
-    }
-    .content {
-      flex: 1;
-      padding: 40px;
-    }
+    .main-wrapper.shifted { margin-left: 240px; }
+    .content { flex: 1; padding: 40px; }
     footer {
       background: #003366;
       color: white;
@@ -84,6 +76,23 @@
       background-color: rgba(255, 255, 255, 0.85);
       padding: 10px;
       border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .live-mass {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .live-mass a {
+      color: white;
+      background-color: #c4302b;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     @media (max-width: 768px) {
       .sidebar {
@@ -92,58 +101,68 @@
         position: fixed;
       }
     }
-    .text-center {
-      margin-left: 30px;
-    }
+    .text-center { margin-left: 30px; }
   </style>
 </head>
 <body>
 
-<!-- Toggle Button -->
-<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<!-- Sidebar -->
-<nav class="sidebar" id="sidebar">
-  <h5 class="text-center text-white">பொருளடக்கம்</h5>
-  <ul class="nav flex-column">
-    <li class="nav-item"><a class="nav-link active" href="index.html">🏠 முகப்புப் பக்கம்</a></li>
-    <li class="nav-item"><a class="nav-link" href="address.html">📌 முகவரி</a></li>
-    <li class="nav-item"><a class="nav-link" href="mass.html">⛪ திருப்பலி நேரம்</a></li>
-    <li class="nav-item"><a class="nav-link" href="events.html">📅 நிகழ்வுகள்</a></li>
-    <li class="nav-item"><a class="nav-link" href="gallery.html">🖼️ படங்கள்</a></li>
-    <li class="nav-item"><a class="nav-link" href="contact.html">☎️ தொடர்பு</a></li>
-    <li class="nav-item"><a class="nav-link" href="history.html">📖 ஆலய வரலாறு</a></li>
-    <li class="nav-item"><a class="nav-link" href="news.html">📢 செய்திகள்</a></li>
-    <li class="nav-item"><a class="nav-link" href="miracles.html">✨ புதுமைகள்</a></li>
-    <li class="nav-item"><a class="nav-link" href="prayers.html">📿 ஜெபங்கள்</a></li>
-    <li class="nav-item"><a class="nav-link" href="shrines.html">🏛️ சிற்றாலயங்கள்</a></li>
-    <li class="nav-item"><a class="nav-link" href="schools.html">🏫 பள்ளிகள்</a></li>
-  </ul>
-</nav>
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <h5 class="text-center text-white">பொருளடக்கம்</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link active" href="index.html">🏠 முகப்புப் பக்கம்</a></li>
+      <li class="nav-item"><a class="nav-link" href="address.html">📌 முகவரி</a></li>
+      <li class="nav-item"><a class="nav-link" href="mass.html">⛪ திருப்பலி நேரம்</a></li>
+      <li class="nav-item"><a class="nav-link" href="events.html">📅 நிகழ்வுகள்</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">🖼️ படங்கள்</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">☎️ தொடர்பு</a></li>
+      <li class="nav-item"><a class="nav-link" href="history.html">📖 ஆலய வரலாறு</a></li>
+      <li class="nav-item"><a class="nav-link" href="news.html">📢 செய்திகள்</a></li>
+      <li class="nav-item"><a class="nav-link" href="miracles.html">✨ புதுமைகள்</a></li>
+      <li class="nav-item"><a class="nav-link" href="prayers.html">📿 ஜெபங்கள்</a></li>
+      <li class="nav-item"><a class="nav-link" href="shrines.html">🏛️ சிற்றாலயங்கள்</a></li>
+      <li class="nav-item"><a class="nav-link" href="schools.html">🏫 பள்ளிகள்</a></li>
+      
+      <!-- ... -->
+    </ul>
+  </nav>
 
-<!-- Main Content -->
-<div class="main-wrapper" id="mainWrapper">
-  <div class="content">
-    <h1>🏠 முகப்புப் பக்கம்</h1>
+  <!-- Main Content -->
+  <div class="main-wrapper" id="mainWrapper">
+    <div class="content">
+      <h1>🏠 முகப்புப் பக்கம்</h1>
 
-    <!-- ✅ Scrolling welcome message -->
-    <marquee behavior="scroll" direction="left" scrollamount="5">
-      இந்த இணையதளத்தில் நீங்கள் முகவரி, திருப்பலி நேரம், நிகழ்வுகள், புகைப்படங்கள், தொடர்பு, ஆலய வரலாறு, ஜெபங்கள் மற்றும் செய்திகள் போன்ற விவரங்களை காணலாம்
-    </marquee>
+      <!-- Scrolling welcome message -->
+      <marquee behavior="scroll" direction="left" scrollamount="5">
+        இந்த இணையதளத்தில் நீங்கள் முகவரி, திருப்பலி நேரம், நிகழ்வுகள், புகைப்படங்கள், தொடர்பு, ஆலய வரலாறு, ஜெபங்கள் மற்றும் செய்திகள் போன்ற விவரங்களை காணலாம்
+      </marquee>
+
+      <!-- Live Mass Link -->
+      <div class="live-mass">
+        <a href="https://www.youtube.com/@OURLADYOFLOURDESCHURCHTHENNUR/live" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+          Live Mass
+        </a>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2025 தூய லூர்து அன்னை ஆலயம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+      <p>Created by ALLEN</p>
+    </footer>
   </div>
 
-  <footer>
-    <p>&copy; 2025 தூய லூர்து அன்னை ஆலயம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-    <p>Created by ALLEN</p>
-  </footer>
-</div>
-
-<script>
-  function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
-    document.getElementById('mainWrapper').classList.toggle('shifted');
-  }
-</script>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+      document.getElementById('mainWrapper').classList.toggle('shifted');
+    }
+  </script>
 
 </body>
 </html>
+
